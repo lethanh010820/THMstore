@@ -237,9 +237,7 @@
                             <nav>
                                 <ul class="list-inline mega-menu">
                                     <li class="active"><a href="index.jsp">Trang chủ</a></li>
-
-                                    <li><a href="shop-gird.jsp">Đồ tập bede</a></li>
-                                    <li><a href="shopyogaControl">Đồ tập yoga</a></li>
+                                    <li><a href="shopyogaControl">Đồ thể thao</a></li>
                                 </ul>
                             </nav>
                         </div>

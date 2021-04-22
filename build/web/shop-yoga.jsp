@@ -11,7 +11,7 @@
 <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title> ĐỒ TẬP YOGA </title>
+        <title> ĐỒ THỂ THAO</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		
@@ -103,7 +103,7 @@
 						<div class="bstore-breadcrumb">
 							<a href="index.jsp">Trang chủ</a>
 							<span><i class="fa fa-caret-right"></i></span>
-							<span>ĐỒ TẬP YOGA</span>
+							<span>ĐỒ THỂ THAO</span>
 						</div>
 						<!-- BSTORE-BREADCRUMB END -->
 					</div>
@@ -117,19 +117,17 @@
 							<div class="product-single-sidebar">
 								<span class="sidebar-title">Thể loại</span>
 								<ul>
+                                                                <c:forEach items="${listC}" var="o">
 									<li>
-										<label class="cheker">
-											<input type="checkbox" name="categories"/>
-											<span></span>
-										</label>
-										<a href="#">Tops<span> (12)</span></a>
+										<a href="category?cid=${o.categoryID}">${o.categoryName}</a>
 									</li>
+                                                                </c:forEach>
 								</ul>
 							</div>
 							<!-- SINGLE SIDEBAR CATEGORIES END -->
 							<!-- SINGLE SIDEBAR AVAILABILITY START -->
 							<div class="product-single-sidebar">
-								<span class="sidebar-title">Kh? d?ng</span>
+								<span class="sidebar-title">Khả dụng</span>
 								<ul>
 									<li>
 										<label class="cheker">
@@ -237,11 +235,11 @@
 							<!-- PRODUCT-CATEGORY-HEADER START -->
 							<div class="product-category-header">
 								<div class="category-header-image">
-									<img src="img/yoga.png" alt="category-header" />
+									<img src="img/category-header1.jpg" alt="category-header" />
 									<div class="category-header-text">
-										<h2>YOGA </h2>
-										<strong>Yoga mang lại sự tịnh tâm, cân bằng</strong>
-										<p>đó là sự kỳ diệu của Yoga! Hãy tập Yoga ?? hoàn thi?n v? ??p hình th?, ch?m sóc tâm h?n và t?n h??ng cu?c s?ng tr?n v?n h?n!</p>
+										<h2>ĐỒ THỂ THAO </h2>
+										<strong></strong>
+										<p>Sporter là nơi bạn có thể đặt áo bóng đá với giá tốt nhất tại TPHCM mà bạn không thể bỏ qua…</p>
 									</div>				
 								</div>
 							</div>
@@ -289,7 +287,7 @@
 									<div class="view-systeam">
 										<label for="perPage">Xem:</label>
 										<ul>
-											<li class="active"><a href="shop-yoga..jsp"><i class="fa fa-th-large"></i></a><br />Lưới</li>
+											<li class="active"><a href="shopyogaControl"><i class="fa fa-th-large"></i></a><br />Lưới</li>
 							
 										</ul>
 									</div>
@@ -321,7 +319,7 @@
 												<a href="#" >Sau<i class="fa fa-chevron-right"></i></a>
 											</li>
 										</ul>
-										<form action="#">
+										<form action="shopyogaControl">
 											<button class="btn showall-button">Hiển thị tất cả</button>
 										</form>
 									</div>
@@ -335,13 +333,13 @@
                                                        
 								<ul class="gategory-product">
 									<!-- SINGLE ITEM START -->
-                                                                        <c:forEach items="${listP}" var="o">
+                                                                        <c:forEach begin="1" end="12" items="${listP}" var="o">
 									<!-- SINGLE ITEM END -->
 												<li class="gategory-product-list col-lg-3 col-md-4 col-sm-6 col-xs-12">
 										<div class="single-product-item">
 											<div class="product-image">
-												<a href="single-product.jsp"><img src="${o.productImage}" alt="product-image" /></a>
-												<a href="single-product.jsp" class="new-mark-box">new</a>
+												<a href="detail?pid=${o.productID}"><img src="${o.productImage}" alt="product-image" /></a>
+												<a href="detail?pid=${o.productID}" class="new-mark-box">new</a>
 												<div class="overlay-content">
 													<ul>
 														<li><a href="#" title="Quick view"><i class="fa fa-search"></i></a></li>
@@ -364,7 +362,7 @@
 														<span>1 Review(s)</span>
 													</div>
 												</div>
-												<a href="single-product.jsp">${o.productName}</a>
+												<a href="detail?pid=${o.productID}">${o.productName}</a>
 												<div class="price-box">
 													<span class="price">${o.productPrice}₫</span>
 												</div>
@@ -404,7 +402,7 @@
 										<a href="#" >Sau<i class="fa fa-chevron-right"></i></a>
 									</li>
 								</ul>
-								<form action="#">
+								<form action="shopyogaControl">
 									<button class="btn showall-button">Hiển thị tất cả</button>
 								</form>
 							</div>
@@ -416,296 +414,6 @@
 		</section>
 		<!-- MAIN-CONTENT-SECTION END -->
 		<!-- COMPANY-FACALITY START -->
-		<section class="company-facality">
-			<div class="container">
-				<div class="row">
-					<div class="company-facality-row">
-						<!-- SINGLE-FACALITY START -->
-						<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-							<div class="single-facality">
-								<div class="facality-icon">
-									<i class="fa fa-rocket"></i>
-								</div>
-								<div class="facality-text">
-									<h3 class="facality-heading-text">MIỄN PHÍ SHIP</h3>
-									<span>on order over 100,000đ</span>
-								</div>
-							</div>
-						</div>
-						<!-- SINGLE-FACALITY END -->
-						<!-- SINGLE-FACALITY START -->
-						<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-							<div class="single-facality">
-								<div class="facality-icon">
-									<i class="fa fa-umbrella"></i>
-								</div>
-								<div class="facality-text">
-									<h3 class="facality-heading-text">HỖ TRỢ 24/7</h3>
-									<span>tư vấn trực tuyến</span>
-								</div>
-							</div>
-						</div>
-						<!-- SINGLE-FACALITY END -->
-						<!-- SINGLE-FACALITY START -->						
-						<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-							<div class="single-facality">
-								<div class="facality-icon">
-									<i class="fa fa-calendar"></i>
-								</div>
-								<div class="facality-text">
-									<h3 class="facality-heading-text">CẬP NHẬP LIÊN TỤC</h3>
-									<span>Xem để biết thông tin mới nhất</span>
-								</div>
-							</div>
-						</div>
-						<!-- SINGLE-FACALITY END -->
-						<!-- SINGLE-FACALITY START -->						
-						<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-							<div class="single-facality">
-								<div class="facality-icon">
-									<i class="fa fa-refresh"></i>
-								</div>
-								<div class="facality-text">
-									<h3 class="facality-heading-text">TRẢ HÀNG 30-DAY</h3>
-									<span>Đảm bảo hoàn tiền</span>
-								</div>
-							</div>
-						</div>		
-						<!-- SINGLE-FACALITY END -->					
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- COMPANY-FACALITY END -->
-		<!-- FOOTER-TOP-AREA START -->
-		<section class="footer-top-area">
-			<div class="container">
-				<div class="footer-top-container">
-					<div class="row">
-						<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-							<!-- FOOTER-TOP-LEFT START -->
-							<div class="footer-top-left">
-								<!-- NEWSLETTER-AREA START -->
-								<div class="newsletter-area">
-									<h2>ĐĂNG KÝ NHẬN TIN KHUYẾN MÃI</h2>
-									<p>Đăng ký vào danh sách gửi thư của chúng tôi để nhận thông tin cập nhật về những người mới đến, ưu đãi đặc biệt và các thông tin giảm giá khác.</p>
-									<form action="#">
-										<div class="form-group newsletter-form-group">
-										  <input type="text" class="form-control newsletter-form" placeholder="Nh?p E-mail c?a b?n">
-										  <input type="submit" class="newsletter-btn" name="submit" value="??ng ký" />
-										</div>
-									</form>
-								</div>
-								<!-- NEWSLETTER-AREA END -->
-								<!-- ABOUT-US-AREA START -->
-								<div class="about-us-area">
-									<h2>VỀ THM-Store</h2>
-									<p>Hệ thống bán lẻ đồ thể thao THM-Store là đơn vị chuyên sản xuất và phân phối các sản phẩm thể thao chuyên nghiệp. Tại đây bạn có thể dễ dàng mua Quần áo và dụng cụ thể thao chất lượng cao, chính hãng..</p>
-								</div>
-								<!-- ABOUT-US-AREA END -->
-								<!-- FLLOW-US-AREA START -->
-								<div class="fllow-us-area">
-									<h2>Theo dõi chúng tôi</h2>
-									<ul class="flow-us-link">
-										<li><a href="https://www.facebook.com/thanh.levan.379"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="#"><i class="fa fa-rss"></i></a></li>
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									</ul>
-								</div>
-								<!-- FLLOW-US-AREA END -->
-							</div>
-							<!-- FOOTER-TOP-LEFT END -->
-						</div>
-						<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-							<!-- FOOTER-TOP-RIGHT-1 START -->
-							<div class="footer-top-right-1">
-								<div class="row">
-									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 hidden-sm">
-										<!-- STATICBLOCK START -->
-										<div class="staticblock">
-											<h2>Khối tĩnh</h2>
-											<p>Shop bóng đá hcm, Shop the thao uy tin, giày thể thao, quần áo thể thao, dụng cụ và phụ kiện thể thao, đồ bóng đá , đặt áo đá bóng. Nhận đặt làm in quần áo bóng đá, quần áo bóng đá Thái Lan, quần áo bóng đá tay dài, áo bóng đá CLB, quốc gia, giày chạy bộ, túi đựng giày, balo thể thao, áo bó body tay dài...Chuyên cung cấp các mặt hàng thể thao theo nhu cầu - Giao hàng tận nơi </p>
-										</div>
-										<!-- STATICBLOCK END -->
-									</div>
-									<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-										<!-- STORE-INFORMATION START -->
-										<div class="Store-Information">
-											<h2>Thông tin cửa hàng</h2>
-											<ul>
-												<li>
-													<div class="info-lefticon">
-														<i class="fa fa-map-marker"></i>
-													</div>
-													<div class="info-text">
-														<p>Đông Hòa, Tx. Dĩ An, Bình Dương</p>
-													</div>
-												</li>
-												<li>
-													<div class="info-lefticon">
-														<i class="fa fa-phone"></i>
-													</div>
-													<div class="info-text call-lh">
-														<p>Gọi ngay cho chúng tôi : 086-657-1001</p>
-													</div>
-												</li>
-												<li>
-													<div class="info-lefticon">
-														<i class="fa fa-envelope-o"></i>
-													</div>
-													<div class="info-text">
-														<p>Email : <a href="mailto:nhatminh19515@gmail.com"><i class="fa fa-angle-double-right"></i> nhatminh19515@gmail.com</a></p>
-													</div>
-												</li>
-											</ul>
-										</div>
-										<!-- STORE-INFORMATION END -->
-									</div>
-									<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-										<!-- GOOGLE-MAP-AREA START -->
-										<div class="google-map-area">
-											<div class="google-map">
-												<div id="googleMap" style="width:100%;height:150px;"></div>
-											</div>
-										</div>
-										<!-- GOOGLE-MAP-AREA END -->
-									</div>
-								</div>
-							</div>
-							<!-- FOOTER-TOP-RIGHT-1 END -->
-							<div class="footer-top-right-2">
-								<div class="row">
-									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-										<!-- FOTTER-MENU-WIDGET START -->
-										<div class="fotter-menu-widget">
-											<div class="single-f-widget">
-												<h2>Phân loại</h2>
-												<ul>
-													<li><a href="shop-gird.jsp"><i class="fa fa-angle-double-right"></i>đồ bóng đsá </a></li>
-													<li><a href="shop-yoga.jsp"><i class="fa fa-angle-double-right"></i>đồ tập Yoga</a></li>
-													<li><a href="shop-gird.jsp"><i class="fa fa-angle-double-right"></i>đồ tập Gym</a></li>
-												</ul>
-											</div>
-										</div>
-										<!-- FOTTER-MENU-WIDGET END -->
-									</div>
-									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
-										<!-- FOTTER-MENU-WIDGET START -->
-										<div class="fotter-menu-widget">
-											<div class="single-f-widget">
-												<h2>Thông tin</h2>
-												<ul>
-													<li><a href="#"><i class="fa fa-angle-double-right"></i>Đăc biệt</a></li>
-													<li><a href="#"><i class="fa fa-angle-double-right"></i>Sản phẩm mới</a></li>
-													<li><a href="#"><i class="fa fa-angle-double-right"></i>Bán chạy nhất</a></li>
-													<li><a href="contact-us.jsp"><i class="fa fa-angle-double-right"></i>Liên hệ với chúng tôi</a></li>
-												</ul>
-											</div>
-										</div>
-										<!-- FOTTER-MENU-WIDGET END -->
-									</div>
-									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-										<!-- FOTTER-MENU-WIDGET START -->
-										<div class="fotter-menu-widget">
-											<div class="single-f-widget">
-												<h2>Tài khoản của tôi</h2>
-												<ul>
-													<li><a href="#"><i class="fa fa-angle-double-right"></i>Đơn đặt hàng của tôi</a></li>
-													<li><a href="#"><i class="fa fa-angle-double-right"></i>Phiếu tín dụng của tôi</a></li>
-													<li><a href="#"><i class="fa fa-angle-double-right"></i>Địa chỉ của tôi</a></li>
-													<li><a href="#"><i class="fa fa-angle-double-right"></i>Thông tin cá nhân</a></li>
-													<li><a href="#"><i class="fa fa-angle-double-right"></i>Đăng xuất</a></li>
-												</ul>
-											</div>
-										</div>
-										<!-- FOTTER-MENU-WIDGET END -->
-									</div>
-									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-										<!-- PAYMENT-METHOD START -->
-										<div class="payment-method">
-											<img class="img-responsive pull-right" src="img/payment.png" alt="payment-method" />
-										</div>
-										<!-- PAYMENT-METHOD END -->
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- FOOTER-TOP-AREA END -->
-		<!-- COPYRIGHT-AREA START -->
-		<footer class="copyright-area">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<div class="copy-right">
-							<address>Copyright © 2015 <a href="http://bootexperts.com/">BootExperts</a> All Rights Reserved</address>
-						</div>
-						<div class="scroll-to-top">
-							<a href="#" class="bstore-scrollertop"><i class="fa fa-angle-double-up"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer> 
-		<!-- COPYRIGHT-AREA END -->
-		<!-- JS 
-		===============================================-->
-		<!-- jquery js -->
-		<script src="js/vendor/jquery-1.11.3.min.js"></script>
-		
-		<!-- fancybox js -->
-        <script src="js/jquery.fancybox.js"></script>
-		
-		<!-- bxslider js -->
-        <script src="js/jquery.bxslider.min.js"></script>
-		
-		<!-- meanmenu js -->
-        <script src="js/jquery.meanmenu.js"></script>
-		
-		<!-- owl carousel js -->
-        <script src="js/owl.carousel.min.js"></script>
-		
-		<!-- nivo slider js -->
-        <script src="js/jquery.nivo.slider.js"></script>
-		
-		<!-- jqueryui js -->
-        <script src="js/jqueryui.js"></script>
-		
-		<!-- bootstrap js -->
-        <script src="js/bootstrap.min.js"></script>
-		
-		<!-- wow js -->
-        <script src="js/wow.js"></script>		
-		<script>
-			new WOW().init();
-		</script>
-
-		<!-- Google Map js -->
-        <script src="https://maps.googleapis.com/maps/api/js"></script>	
-		<script>
-			function initialize() {
-			  var mapOptions = {
-				zoom: 8,
-				scrollwheel: false,
-				center: new google.maps.LatLng(35.149868, -90.046678)
-			  };
-			  var map = new google.maps.Map(document.getElementById('googleMap'),
-				  mapOptions);
-			  var marker = new google.maps.Marker({
-				position: map.getCenter(),
-				map: map
-			  });
-
-			}
-			google.maps.event.addDomListener(window, 'load', initialize);				
-		</script>
-		<!-- main js -->
-        <script src="js/main.js"></script>
+		<jsp:include page="footer.jsp"></jsp:include>
     </body>
-
-<!-- Nulled by http://www.baobinh.net by tieulonglanh -->
 </html>

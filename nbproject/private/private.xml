@@ -3,11 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/THMstore/web/single-product.jsp</file>
-            <file>file:/C:/THMstore/web/single-products.jsp</file>
-            <file>file:/C:/THMstore/web/shop-yoga.jsp</file>
-            <file>file:/C:/THMstore/web/index.jsp</file>
-            <file>file:/C:/THMstore/web/shop-gird.jsp</file>
+            <file>file:/C:/Users/asus/Desktop/THMstore/web/shop-yoga.jsp</file>
+            <file>file:/C:/Users/asus/Desktop/THMstore/src/java/model/category.java</file>
+            <file>file:/C:/Users/asus/Desktop/THMstore/web/shop-gird.jsp</file>
+            <file>file:/C:/Users/asus/Desktop/THMstore/web/single-product.jsp</file>
+            <file>file:/C:/Users/asus/Desktop/THMstore/src/java/control/categoryControl.java</file>
+            <file>file:/C:/Users/asus/Desktop/THMstore/src/java/control/detailControl.java</file>
+            <file>file:/C:/Users/asus/Desktop/THMstore/src/java/control/shopyogaControl.java</file>
+            <file>file:/C:/Users/asus/Desktop/THMstore/src/java/dao/ProductDAO.java</file>
+            <file>file:/C:/Users/asus/Desktop/THMstore/src/java/dao/categoryDAO.java</file>
         </group>
     </open-files>
 </project-private>

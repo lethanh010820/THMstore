@@ -333,7 +333,7 @@
                                                        
 								<ul class="gategory-product">
 									<!-- SINGLE ITEM START -->
-                                                                        <c:forEach begin="1" end="12" items="${listP}" var="o">
+                                                                        <c:forEach items="${listP}" var="o">
 									<!-- SINGLE ITEM END -->
 												<li class="gategory-product-list col-lg-3 col-md-4 col-sm-6 col-xs-12">
 										<div class="single-product-item">

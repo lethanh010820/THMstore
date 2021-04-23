@@ -90,6 +90,10 @@
 		<!-- IE CSS 
 		============================================ -->
         <link rel="stylesheet" href="css/ie.css">
+        
+                <!-- W3SCHOOL CSS 
+        ============================================ -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		
 		<!-- MODERNIZR JS 
 		============================================ -->

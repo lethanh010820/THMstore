@@ -162,10 +162,10 @@
                         <!-- HEADER-RIGHT-CALLUS END -->
                         <!-- CATEGORYS-PRODUCT-SEARCH START -->
                         <div class="categorys-product-search">
-                            <form action="#" method="get" class="search-form-cat">
+                            <form action="search" method="get" class="search-form-cat">
                                 <div class="search-product form-group">
-                                    <input type="text" class="form-control search-form" name="s" placeholder="Nhập từ khóa tìm kiếm của bạn... " />
-                                    <button class="search-button" value="Search" name="s" type="submit">
+                                    <input value="${txtS}" type="text" class="form-control search-form" name="txt" placeholder="Nhập từ khóa tìm kiếm của bạn... " />
+                                    <button class="search-button" value="search" type="submit">
                                         <i class="fa fa-search"></i>
                                     </button>									 
                                 </div>

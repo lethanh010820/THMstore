@@ -90,6 +90,9 @@
 		<!-- IE CSS 
 		============================================ -->
         <link rel="stylesheet" href="css/ie.css">
+                <!-- W3SCHOOL CSS 
+        ============================================ -->
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		
 		<!-- MODERNIZR JS 
 		============================================ -->
@@ -171,11 +174,11 @@
 								<div class="form-content">
 									<div class="form-group primary-form-group">
 										<label for="loginemail">Email address</label>
-										<input type="text" value="" name="email" id="loginemail" class="form-control input-feild">
+										<input type="text" value="" name="user" id="loginemail" class="form-control input-feild">
 									</div>
 									<div class="form-group primary-form-group">
 										<label for="password">Password</label>
-										<input type="password" value="" name="password" id="password" class="form-control input-feild">
+										<input type="password" value="" name="pass" id="password" class="form-control input-feild">
 									</div>
 									<div class="forget-password">
 										<p><a href="#">Forgot your password?</a></p>

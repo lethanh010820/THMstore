@@ -3,19 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/asus/Desktop/THMstore/web/shop-gird.jsp</file>
-            <file>file:/C:/Users/asus/Desktop/THMstore/web/cart.jsp</file>
-            <file>file:/C:/Users/asus/Desktop/THMstore/web/checkout-signin.jsp</file>
-            <file>file:/C:/Users/asus/Desktop/THMstore/web/checkout.jsp</file>
-            <file>file:/C:/Users/asus/Desktop/THMstore/web/footer.jsp</file>
-            <file>file:/C:/Users/asus/Desktop/THMstore/web/my-account.jsp</file>
-            <file>file:/C:/Users/asus/Desktop/THMstore/web/single-product.jsp</file>
-            <file>file:/C:/Users/asus/Desktop/THMstore/web/checkout-registration.jsp</file>
-            <file>file:/C:/Users/asus/Desktop/THMstore/web/contact-us.jsp</file>
-            <file>file:/C:/Users/asus/Desktop/THMstore/web/registration.jsp</file>
-            <file>file:/C:/Users/asus/Desktop/THMstore/web/header.jsp</file>
-            <file>file:/C:/Users/asus/Desktop/THMstore/web/index.jsp</file>
+            <file>file:/C:/Users/asus/Desktop/THMstore/web/shop-yoga.jsp</file>
+            <file>file:/C:/Users/asus/Desktop/THMstore/web/ManagerProduct.jsp</file>
+            <file>file:/C:/Users/asus/Desktop/THMstore/src/java/control/categoryControl.java</file>
+            <file>file:/C:/Users/asus/Desktop/THMstore/src/java/model/Product.java</file>
+            <file>file:/C:/Users/asus/Desktop/THMstore/src/java/control/detailControl.java</file>
             <file>file:/C:/Users/asus/Desktop/THMstore/src/java/dao/ProductDAO.java</file>
+            <file>file:/C:/Users/asus/Desktop/THMstore/src/java/control/shopyogaControl.java</file>
         </group>
     </open-files>
 </project-private>

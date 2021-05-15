@@ -134,7 +134,7 @@
                                                     <h2 class="animated bounceInDown">ĐỒ THỂ THAO</h2>
                                                     <p class="animated bounceInUp"> Yoga Collection</p>
                                                     <p class="animated bounceInUp">Bộ sưu tập đồ tập Yoga 2020 chất lượng với nhiều mẫu mã trẻ trung, kiểu dáng thời trang thể thao mới nhất.</p>	
-                                                    <a class="wow zoomInDown" data-wow-duration="1s" data-wow-delay="1s" href="#">Xem thêm <i class="fa fa-caret-right"></i></a>													
+                                                    <a class="wow zoomInDown" data-wow-duration="1s" data-wow-delay="1s" href="shopyogaControl">Xem thêm <i class="fa fa-caret-right"></i></a>													
                                                 </div>
                                             </div>
                                         </div>
@@ -144,7 +144,7 @@
                                                 <div class="d-table-cell">
                                                     <h2 class="animated bounceInDown">ĐỒ BÓNG ĐÁ</h2>
                                                     <p class="animated bounceInUp">Sporter là nơi bạn có thể đặt áo bóng đá với giá tốt nhất tại TPHCM mà bạn không thể bỏ qua…</p>	
-                                                    <a class="wow zoomInDown" data-wow-duration="1s" data-wow-delay="1s" href="#">Xem thêm <i class="fa fa-caret-right"></i></a>
+                                                    <a class="wow zoomInDown" data-wow-duration="1s" data-wow-delay="1s" href="shopyogaControl">Xem thêm <i class="fa fa-caret-right"></i></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -169,7 +169,7 @@
                         <!-- NEW-PRODUCT-AREA START -->
                         <div class="new-product-area">
                             <div class="left-title-area">
-                                <h2 class="left-title">New Products</h2>
+                                <h2 class="left-title">TOP 5 SẢN PHẨM MỚI NHẤT</h2>
                             </div>						
                             <div class="row">
                                 <div class="col-xs-12">
@@ -177,12 +177,15 @@
                                         <!-- NEW-PRO-CAROUSEL START -->
                                         <div class="new-pro-carousel">
                                             <!-- NEW-PRODUCT-SINGLE-ITEM START -->
+                                            <c:forEach items="${listT}" var="o">
                                             <div class="item">
+                                                
                                                 <div class="new-product">
+                                                    
                                                     <div class="single-product-item">
                                                         <div class="product-image">
-                                                            <a href="#"><img src="img/product/sale/barca1.jpg" alt="product-image" /></a>
-                                                            <a href="#" class="new-mark-box">new</a>
+                                                            <a href="detail?pid=${o.productID}"><img src="${o.productImage}" alt="product-image" /></a>
+                                                            <a href="detail?pid=${o.productID}" class="new-mark-box">new</a>
                                                             <div class="overlay-content">
                                                                 <ul>
                                                                     <li><a href="#" title="Quick view"><i class="fa fa-search"></i></a></li>
@@ -205,361 +208,17 @@
                                                                     <span>1 Review (s)</span>
                                                                 </div>
                                                             </div>
-                                                            <a href="single-product.jsp">Áo Barca 2020 – 2021 sân nhà</a>
+                                                            <a href="detail?pid=${o.productID}">${o.productName}</a>
                                                             <div class="price-box">
-                                                                <span class="price">110,000₫</span>
+                                                                <span class="price">${o.productPrice}₫</span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                           
                                             </div>
-                                            <!-- NEW-PRODUCT-SINGLE-ITEM END -->
-                                            <!-- NEW-PRODUCT-SINGLE-ITEM START -->
-                                            <div class="item">
-                                                <div class="new-product">
-                                                    <div class="single-product-item">
-                                                        <div class="product-image">
-                                                            <a href="#"><img src="img/product/sale/tot1.jpg" alt="product-image" /></a>
-                                                            <a href="#" class="new-mark-box">new</a>
-                                                            <div class="overlay-content">
-                                                                <ul>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-search"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-shopping-cart"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-retweet"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-heart-o"></i></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-info">
-                                                            <div class="customar-comments-box">
-                                                                <div class="rating-box">
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                </div>
-                                                                <div class="review-box">
-                                                                    <span>1 Review (s)</span>
-                                                                </div>
-                                                            </div>
-                                                            <a href="single-product.jsp">Áo Tottenham sân nhà 2020 – 2021</a>
-                                                            <div class="price-box">
-                                                                <span class="price">99,000₫</span>
-                                                                <span class="old-price">110,000₫</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- NEW-PRODUCT-SINGLE-ITEM END -->
-                                            <!-- NEW-PRODUCT-SINGLE-ITEM START -->
-                                            <div class="item">
-                                                <div class="new-product">
-                                                    <div class="single-product-item">
-                                                        <div class="product-image">
-                                                            <a href="#"><img src="img/product/sale/real1.jpg" alt="product-image" /></a>
-                                                            <a href="#" class="new-mark-box">new</a>
-                                                            <div class="overlay-content">
-                                                                <ul>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-search"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-shopping-cart"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-retweet"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-heart-o"></i></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-info">
-                                                            <div class="customar-comments-box">
-                                                                <div class="rating-box">
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star-half-empty"></i>
-                                                                </div>
-                                                                <div class="review-box">
-                                                                    <span>1 Review (s)</span>
-                                                                </div>
-                                                            </div>
-                                                            <a href="single-product.jsp">Áo Real Madrid trắng sân nhà 2020 – 2021</a>
-                                                            <div class="price-box">
-                                                                <span class="price">110,000₫</span>
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- NEW-PRODUCT-SINGLE-ITEM END -->
-                                            <!-- NEW-PRODUCT-SINGLE-ITEM START -->
-                                            <div class="item">
-                                                <div class="new-product">
-                                                    <div class="single-product-item">
-                                                        <div class="product-image">
-                                                            <a href="#"><img src="img/product/sale/juve1.jpg" alt="product-image" /></a>
-                                                            <a href="#" class="new-mark-box">new</a>
-                                                            <div class="overlay-content">
-                                                                <ul>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-search"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-shopping-cart"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-retweet"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-heart-o"></i></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-info">
-                                                            <div class="customar-comments-box">
-                                                                <div class="rating-box">
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                </div>
-                                                                <div class="review-box">
-                                                                    <span>1 Review (s)</span>
-                                                                </div>
-                                                            </div>
-                                                            <a href="single-product.jsp">Áo Juventus sân nhà 2020 – 2021</a>
-                                                            <div class="price-box">
-                                                                <span class="price">110,000₫</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- NEW-PRODUCT-SINGLE-ITEM END -->
-                                            <!-- NEW-PRODUCT-SINGLE-ITEM START -->
-                                            <div class="item">
-                                                <div class="new-product">
-                                                    <div class="single-product-item">
-                                                        <div class="product-image">
-                                                            <a href="#"><img src="img/product/sale/juve2.jpg" alt="product-image" /></a>
-                                                            <a href="#" class="new-mark-box">new</a>
-                                                            <div class="overlay-content">
-                                                                <ul>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-search"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-shopping-cart"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-retweet"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-heart-o"></i></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-info">
-                                                            <div class="customar-comments-box">
-                                                                <div class="rating-box">
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star-half-empty"></i>
-                                                                    <i class="fa fa-star-half-empty"></i>
-                                                                </div>
-                                                                <div class="review-box">
-                                                                    <span>1 Review (s)</span>
-                                                                </div>
-                                                            </div>
-                                                            <a href="single-product.jsp">Áo Juventus sân khách 2020 – 2021</a>
-                                                            <div class="price-box">
-                                                                <span class="price">110,000₫</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- NEW-PRODUCT-SINGLE-ITEM END -->
-                                            <!-- NEW-PRODUCT-SINGLE-ITEM START -->
-                                            <div class="item">
-                                                <div class="new-product">
-                                                    <div class="single-product-item">
-                                                        <div class="product-image">
-                                                            <a href="#"><img src="img/product/sale/ches1.jpg" alt="product-image" /></a>
-                                                            <a href="#" class="new-mark-box">new</a>
-                                                            <div class="overlay-content">
-                                                                <ul>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-search"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-shopping-cart"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-retweet"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-heart-o"></i></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-info">
-                                                            <div class="customar-comments-box">
-                                                                <div class="rating-box">
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star-half-empty"></i>
-                                                                    <i class="fa fa-star-half-empty"></i>
-                                                                </div>
-                                                                <div class="review-box">
-                                                                    <span>1 Review (s)</span>
-                                                                </div>
-                                                            </div>
-                                                            <a href="single-product.jsp">Áo Chelsea sân nhà 2020 – 2021</a>
-                                                            <div class="price-box">
-                                                                <span class="price">110,000₫</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- NEW-PRODUCT-SINGLE-ITEM END -->
-                                            <!-- NEW-PRODUCT-SINGLE-ITEM START -->
-                                            <div class="item">
-                                                <div class="new-product">
-                                                    <div class="single-product-item">
-                                                        <div class="product-image">
-                                                            <a href="#"><img src="img/product/sale/ches2.jpg" alt="product-image" /></a>
-                                                            <a href="#" class="new-mark-box">new</a>
-                                                            <div class="overlay-content">
-                                                                <ul>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-search"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-shopping-cart"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-retweet"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-heart-o"></i></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-info">
-                                                            <div class="customar-comments-box">
-                                                                <div class="rating-box">
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star-half-empty"></i>
-                                                                </div>
-                                                                <div class="review-box">
-                                                                    <span>1 Review (s)</span>
-                                                                </div>
-                                                            </div>
-                                                            <a href="single-product.jsp">Áo Chelsea sân khách 2020 – 2021</a>
-                                                            <div class="price-box">
-                                                                <span class="price">110,000₫</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- NEW-PRODUCT-SINGLE-ITEM END -->
-                                            <!-- NEW-PRODUCT-SINGLE-ITEM START -->										
-                                            <div class="item">
-                                                <div class="new-product">
-                                                    <div class="single-product-item">
-                                                        <div class="product-image">
-                                                            <a href="#"><img src="img/product/sale/yo2.jpg" alt="product-image" /></a>
-                                                            <a href="#" class="new-mark-box">sale!</a>
-                                                            <div class="overlay-content">
-                                                                <ul>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-search"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-shopping-cart"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-retweet"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-heart-o"></i></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-info">
-                                                            <div class="customar-comments-box">
-                                                                <div class="rating-box">
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                </div>
-                                                                <div class="review-box">
-                                                                    <span>1 Review (s)</span>
-                                                                </div>
-                                                            </div>
-                                                            <a href="single-product.jsp">Bra 360s Reflaxed màu xanh dương</a>
-                                                            <div class="price-box">
-                                                                <span class="price">195,000₫</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- NEW-PRODUCT-SINGLE-ITEM END -->
-                                            <!-- NEW-PRODUCT-SINGLE-ITEM START -->										
-                                            <div class="item">
-                                                <div class="new-product">
-                                                    <div class="single-product-item">
-                                                        <div class="product-image">
-                                                            <a href="#"><img src="img/product/sale/yo1.jpg" alt="product-image" /></a>
-                                                            <a href="#" class="new-mark-box">sale!</a>
-                                                            <div class="overlay-content">
-                                                                <ul>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-search"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-shopping-cart"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-retweet"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-heart-o"></i></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-info">
-                                                            <div class="customar-comments-box">
-                                                                <div class="rating-box">
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star-half-empty"></i>
-                                                                    <i class="fa fa-star-half-empty"></i>
-                                                                </div>
-                                                                <div class="review-box">
-                                                                    <span>1 Review (s)</span>
-                                                                </div>
-                                                            </div>
-                                                            <a href="single-product.jsp">Bra 360s Farewell màu hồng</a>
-                                                            <div class="price-box">
-                                                                <span class="price">195,000₫</span>
-                                                                <span class="old-price">250,000₫</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- NEW-PRODUCT-SINGLE-ITEM END -->
-                                            <!-- NEW-PRODUCT-SINGLE-ITEM START -->										
-                                            <div class="item">
-                                                <div class="new-product">
-                                                    <div class="single-product-item">
-                                                        <div class="product-image">
-                                                            <a href="#"><img src="img/product/sale/yo3.jpg" alt="product-image" /></a>
-                                                            <a href="#" class="new-mark-box">new</a>
-                                                            <div class="overlay-content">
-                                                                <ul>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-search"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-shopping-cart"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-retweet"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-heart-o"></i></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-info">
-                                                            <div class="customar-comments-box">
-                                                                <div class="rating-box">
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star-half-empty"></i>
-                                                                </div>
-                                                                <div class="review-box">
-                                                                    <span>1 Review (s)</span>
-                                                                </div>
-                                                            </div>
-                                                            <a href="single-product.jsp">Bra 360s Galaxy màu hồng</a>
-                                                            <div class="price-box">
-                                                                <span class="price">195,000₫</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- NEW-PRODUCT-SINGLE-ITEM END -->
-                                            <!-- NEW-PRODUCT-SINGLE-ITEM START -->										
+                                            </c:forEach> 
+                                            <!-- NEW-PRODUCT-SINGLE-ITEM END -->										
                                         </div>
                                         <!-- NEW-PRO-CAROUSEL END -->
                                     </div>
@@ -572,7 +231,7 @@
                         <!-- SALE-PRODUCTS START -->
                         <div class="Sale-Products">
                             <div class="left-title-area">
-                                <h2 class="left-title">Sale Products</h2>
+                                <h2 class="left-title">TOP 7 SẢN PHẨM OLD</h2>
                             </div>
                             <div class="row">
                                 <div class="col-xs-12">
@@ -580,12 +239,13 @@
                                         <!-- SALE-CAROUSEL START -->
                                         <div class="sale-carousel">
                                             <!-- SALE-PRODUCTS-SINGLE-ITEM START -->
+                                        <c:forEach items="${listO}" var="o">
                                             <div class="item">
                                                 <div class="new-product">
                                                     <div class="single-product-item">
                                                         <div class="product-image">
-                                                            <a href="#"><img src="img/product/sale/Ao-eros-xam-dam-1-300x300.jpg" alt="product-image" /></a>
-                                                            <a href="#" class="new-mark-box">new</a>
+                                                            <a href="detail?pid=${o.productID}"><img src="${o.productImage}" alt="product-image" /></a>
+                                                            <a href="detail?pid=${o.productID}" class="new-mark-box">new</a>
                                                             <div class="overlay-content">
                                                                 <ul>
                                                                     <li><a href="#" title="Quick view"><i class="fa fa-search"></i></a></li>
@@ -608,133 +268,16 @@
                                                                     <span>1 Review (s)</span>
                                                                 </div>
                                                             </div>
-                                                            <a href="single-product.jsp">Áo thun thể thao Poseidon xám</a>
+                                                            <a href="detail?pid=${o.productID}">${o.productName}</a>
                                                             <div class="price-box">
-                                                                <span class="price">245,000₫</span>
-                                                                <span class="old-price">320,000₫</span>
+                                                                <span class="price">${o.productPrice}₫</span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <!-- SALE-PRODUCTS-SINGLE-ITEM END -->
-                                            <!-- SALE-PRODUCTS-SINGLE-ITEM START -->
-                                            <div class="item">
-                                                <div class="new-product">
-                                                    <div class="single-product-item">
-                                                        <div class="product-image">
-                                                            <a href="#"><img src="img/product/sale/Ao-eros-xanh-duong-1-300x300.jpg" alt="product-image" /></a>
-                                                            <a href="#" class="new-mark-box">sale!</a>
-                                                            <div class="overlay-content">
-                                                                <ul>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-search"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-shopping-cart"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-retweet"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-heart-o"></i></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-info">
-                                                            <div class="customar-comments-box">
-                                                                <div class="rating-box">
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star-half-empty"></i>
-                                                                    <i class="fa fa-star-half-empty"></i>
-                                                                </div>
-                                                                <div class="review-box">
-                                                                    <span>1 Review (s)</span>
-                                                                </div>
-                                                            </div>
-                                                            <a href="single-product.jsp">Áo thun thể thao Eros xanh dương</a>
-                                                            <div class="price-box">
-                                                                <span class="price">245,000₫</span>
-                                                                <span class="old-price">320,000₫</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- SALE-PRODUCTS-SINGLE-ITEM END -->
-                                            <!-- SALE-PRODUCTS-SINGLE-ITEM START -->		
-                                            <div class="item">
-                                                <div class="new-product">
-                                                    <div class="single-product-item">
-                                                        <div class="product-image">
-                                                            <a href="#"><img src="img/product/sale/Ao-hades-den-1-300x300.jpg" alt="product-image" /></a>
-                                                            <a href="#" class="new-mark-box">sale!</a>
-                                                            <div class="overlay-content">
-                                                                <ul>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-search"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-shopping-cart"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-retweet"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-heart-o"></i></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-info">
-                                                            <div class="customar-comments-box">
-                                                                <div class="rating-box">
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                </div>
-                                                                <div class="review-box">
-                                                                    <span>1 Review (s)</span>
-                                                                </div>
-                                                            </div>
-                                                            <a href="single-product.jsp">Áo thun thể thao Apollo đen</a>
-                                                            <div class="price-box">
-                                                                <span class="price"> 245,000₫</span>
-                                                                <span class="old-price">320,000₫</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- SALE-PRODUCTS-SINGLE-ITEM END -->
-                                            <!-- SALE-PRODUCTS-SINGLE-ITEM START -->									
-                                            <div class="item">
-                                                <div class="new-product">
-                                                    <div class="single-product-item">
-                                                        <div class="product-image">
-                                                            <a href="#"><img src="img/product/sale/Ao-hades-xanh-den-1-300x300.jpg" alt="product-image" /></a>
-                                                            <a href="#" class="new-mark-box">new</a>
-                                                            <div class="overlay-content">
-                                                                <ul>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-search"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-shopping-cart"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-retweet"></i></a></li>
-                                                                    <li><a href="#" title="Quick view"><i class="fa fa-heart-o"></i></a></li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="product-info">
-                                                            <div class="customar-comments-box">
-                                                                <div class="rating-box">
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                    <i class="fa fa-star"></i>
-                                                                </div>
-                                                                <div class="review-box">
-                                                                    <span>1 Review (s)</span>
-                                                                </div>
-                                                            </div>
-                                                            <a href="single-product.jsp">Áo thun thể thao Poseidon xanh đen</a>
-                                                            <div class="price-box">
-                                                                <span class="price">245,000₫</span>
-                                                                <span class="old-price">320,000₫</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- SALE-PRODUCTS-SINGLE-ITEM END -->								
+                                        </c:forEach>
                                         </div>
                                         <!-- SALE-CAROUSEL END -->
                                     </div>
@@ -745,219 +288,6 @@
                     </div>
                 </div>
                 <!-- TOW-COLUMN-PRODUCT END -->
-                <div class="row">
-                    <!-- ADD-TWO-BY-ONE-COLUMN START -->
-                    <div class="add-two-by-one-column">
-                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                            <div class="tow-column-add zoom-img">
-                                <a href="#"><img src="img/product/ao-moi-bong-da-viet-nam-2018-1.jpg" alt="shope-add" /></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="one-column-add zoom-img">
-                                <a href="#"><img src="img/product/b7b76ed564f9db4510561006c788511d.jpg" alt="shope-add" /></a>
-                            </div>								
-                        </div>
-                    </div>
-                    <!-- ADD-TWO-BY-ONE-COLUMN END -->
-                </div>
-                <div class="row">
-                    <!-- FEATURED-PRODUCTS-AREA START -->
-                    <div class="featured-products-area">
-                        <div class="center-title-area">
-                            <h2 class="center-title">Featured Products</h2>
-                        </div>	
-                        <div class="col-xs-12">
-                            <div class="row">
-                                <!-- FEARTURED-CAROUSEL START -->
-                                <div class="feartured-carousel">
-                                    <!-- SINGLE-PRODUCT-ITEM START -->
-                                    <div class="item">
-                                        <div class="single-product-item">
-                                            <div class="product-image">
-                                                <a href="#"><img src="img/product/sale/yo1.jpg" alt="product-image" /></a>
-                                                <a href="#" class="new-mark-box">new</a>
-                                                <div class="overlay-content">
-                                                    <ul>
-                                                        <li><a href="#" title="Quick view"><i class="fa fa-search"></i></a></li>
-                                                        <li><a href="#" title="Quick view"><i class="fa fa-shopping-cart"></i></a></li>
-                                                        <li><a href="#" title="Quick view"><i class="fa fa-retweet"></i></a></li>
-                                                        <li><a href="#" title="Quick view"><i class="fa fa-heart-o"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="product-info">
-                                                <div class="customar-comments-box">
-                                                    <div class="rating-box">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star-half-empty"></i>
-                                                    </div>
-                                                    <div class="review-box">
-                                                        <span>1 Review (s)</span>
-                                                    </div>
-                                                </div>
-                                                <a href="single-product.jsp">Bra 360s Farewell màu hồng</a>
-                                                <div class="price-box">
-                                                    <span class="price">195,000₫</span>
-                                                </div>
-                                            </div>
-                                        </div>							
-                                    </div>
-                                    <!-- SINGLE-PRODUCT-ITEM END -->
-                                    <!-- SINGLE-PRODUCT-ITEM START -->
-                                    <div class="item">
-                                        <div class="single-product-item">
-                                            <div class="product-image">
-                                                <a href="#"><img src="img/product/sale/yo2.jpg" alt="product-image" /></a>
-                                                <a href="#" class="new-mark-box">sale!</a>
-                                                <div class="overlay-content">
-                                                    <ul>
-                                                        <li><a href="#" title="Quick view"><i class="fa fa-search"></i></a></li>
-                                                        <li><a href="#" title="Quick view"><i class="fa fa-shopping-cart"></i></a></li>
-                                                        <li><a href="#" title="Quick view"><i class="fa fa-retweet"></i></a></li>
-                                                        <li><a href="#" title="Quick view"><i class="fa fa-heart-o"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="product-info">
-                                                <div class="customar-comments-box">
-                                                    <div class="rating-box">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                    </div>
-                                                    <div class="review-box">
-                                                        <span>1 Review (s)</span>
-                                                    </div>
-                                                </div>
-                                                <a href="single-product.jsp">Bra 360s Reflaxed màu xanh dương</a>
-                                                <div class="price-box">
-                                                    <span class="price">195,000₫</span>
-                                                </div>
-                                            </div>
-                                        </div>							
-                                    </div>
-                                    <!-- SINGLE-PRODUCT-ITEM END -->
-                                    <!-- SINGLE-PRODUCT-ITEM START -->								
-                                    <div class="item">
-                                        <div class="single-product-item">
-                                            <div class="product-image">
-                                                <a href="#"><img src="img/product/sale/yo3.jpg" alt="product-image" /></a>
-                                                <a href="#" class="new-mark-box">sale!</a>
-                                                <div class="overlay-content">
-                                                    <ul>
-                                                        <li><a href="#" title="Quick view"><i class="fa fa-search"></i></a></li>
-                                                        <li><a href="#" title="Quick view"><i class="fa fa-shopping-cart"></i></a></li>
-                                                        <li><a href="#" title="Quick view"><i class="fa fa-retweet"></i></a></li>
-                                                        <li><a href="#" title="Quick view"><i class="fa fa-heart-o"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="product-info">
-                                                <div class="customar-comments-box">
-                                                    <div class="rating-box">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star-half-empty"></i>
-                                                        <i class="fa fa-star-half-empty"></i>
-                                                    </div>
-                                                    <div class="review-box">
-                                                        <span>1 Review (s)</span>
-                                                    </div>
-                                                </div>
-                                                <a href="single-product.jsp">Bra 360s Galaxy màu hồng</a>
-                                                <div class="price-box">
-                                                    <span class="price">195,000₫</span>
-                                                </div>
-                                            </div>
-                                        </div>							
-                                    </div>
-                                    <!-- SINGLE-PRODUCT-ITEM END -->
-                                    <!-- SINGLE-PRODUCT-ITEM START -->								
-                                    <div class="item">
-                                        <div class="single-product-item">
-                                            <div class="product-image">
-                                                <a href="#"><img src="img/product/sale/yo5.jpg" alt="product-image" /></a>
-                                                <a href="#" class="new-mark-box">new</a>
-                                                <div class="overlay-content">
-                                                    <ul>
-                                                        <li><a href="#" title="Quick view"><i class="fa fa-search"></i></a></li>
-                                                        <li><a href="#" title="Quick view"><i class="fa fa-shopping-cart"></i></a></li>
-                                                        <li><a href="#" title="Quick view"><i class="fa fa-retweet"></i></a></li>
-                                                        <li><a href="#" title="Quick view"><i class="fa fa-heart-o"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="product-info">
-                                                <div class="customar-comments-box">
-                                                    <div class="rating-box">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star-half-empty"></i>
-                                                    </div>
-                                                    <div class="review-box">
-                                                        <span>1 Review (s)</span>
-                                                    </div>
-                                                </div>
-                                                <a href="single-product.jsp">Bra 360s Indy màu hồng</a>
-                                                <div class="price-box">
-                                                    <span class="price">195,000₫</span>
-                                                </div>
-                                            </div>
-                                        </div>							
-                                    </div>		
-                                    <!-- SINGLE-PRODUCT-ITEM END -->
-                                    <!-- SINGLE-PRODUCT-ITEM START -->								
-                                    <div class="item">
-                                        <div class="single-product-item">
-                                            <div class="product-image">
-                                                <a href="#"><img src="img/product/sale/yo6.jpg" alt="product-image" /></a>
-                                                <a href="#" class="new-mark-box">new</a>
-                                                <div class="overlay-content">
-                                                    <ul>
-                                                        <li><a href="#" title="Quick view"><i class="fa fa-search"></i></a></li>
-                                                        <li><a href="#" title="Quick view"><i class="fa fa-shopping-cart"></i></a></li>
-                                                        <li><a href="#" title="Quick view"><i class="fa fa-retweet"></i></a></li>
-                                                        <li><a href="#" title="Quick view"><i class="fa fa-heart-o"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="product-info">
-                                                <div class="customar-comments-box">
-                                                    <div class="rating-box">
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star"></i>
-                                                        <i class="fa fa-star-half-empty"></i>
-                                                        <i class="fa fa-star-half-empty"></i>
-                                                    </div>
-                                                    <div class="review-box">
-                                                        <span>1 Review (s)</span>
-                                                    </div>
-                                                </div>
-                                                <a href="single-product.jsp">Bra 360s Farewell màu mint</a>
-                                                <div class="price-box">
-                                                    <span class="price">195,000₫</span>
-                                                </div>
-                                            </div>
-                                        </div>							
-                                    </div>		
-                                    <!-- SINGLE-PRODUCT-ITEM END -->						
-                                </div>
-                                <!-- FEARTURED-CAROUSEL END -->
-                            </div>
-                        </div>						
-                    </div>
-                    <!-- FEATURED-PRODUCTS-AREA END -->
-                </div>
                 <div class="row">
                     <!-- IMAGE-ADD-AREA START -->
                     <div class="image-add-area">

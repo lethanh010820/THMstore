@@ -6,9 +6,11 @@
 package control;
 
 import dao.ProductDAO;
+import dao.categoryDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletException;
@@ -40,8 +42,10 @@ public class detailControl extends HttpServlet {
         String id = request.getParameter("pid");
         ProductDAO dao = new ProductDAO();
         Product p = dao.getListProductByID(id);
+        Product last = dao.getLast();
         
         request.setAttribute("detail", p);
+        request.setAttribute("pp", last);
         request.getRequestDispatcher("single-product.jsp").forward(request, response);
         
         

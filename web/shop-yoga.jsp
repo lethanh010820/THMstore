@@ -101,7 +101,7 @@
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<!-- BSTORE-BREADCRUMB START -->
 						<div class="bstore-breadcrumb">
-							<a href="index.jsp">Trang chủ</a>
+							<a href="index">Trang chủ</a>
 							<span><i class="fa fa-caret-right"></i></span>
 							<span>ĐỒ THỂ THAO</span>
 						</div>
@@ -276,7 +276,6 @@
 										<label for="perPage">Hiển thị</label>
 										<div class="s-page-select-option">
 											<select name="show" id="perPage">
-												<option value="">11</option>
 												<option value="">12</option>
 											</select>													
 										</div>
@@ -295,29 +294,16 @@
 								</div>
 								<!-- PRODUCT-SHOOTING-RESULT START -->
 								<div class="product-shooting-result">
-									<form action="#">
-										<button class="btn compare-button">
-											So sánh (<span class="compare-value">1</span>)
-											<i class="fa fa-chevron-right"></i>
-										</button>
-									</form>
 									<div class="showing-item">
-										<span>Xem 1 - 12 trong 13 sản phẩm</span>
+										<span>Xem 1 - 12 trong ${count} sản phẩm</span>
 									</div>
 									<div class="showing-next-prev">
 										<ul class="pagination-bar">
-											<li class="disabled">
-												<a href="#" ><i class="fa fa-chevron-left"></i>Trước</a>
-											</li>
+                                                                                <c:forEach begin="1" end="${endPage}" var="i">
 											<li class="active">
-												<span><a class="pagi-num" href="#">1</a></span>
+												<span><a class="pagi-num" href="shopyogaControl?cid=${i}">${i}</a></span>
 											</li>
-											<li>
-												<span><a class="pagi-num" href="#">2</a></span>
-											</li>
-											<li>
-												<a href="#" >Sau<i class="fa fa-chevron-right"></i></a>
-											</li>
+                                                                                </c:forEach>
 										</ul>
 										<form action="shopyogaControl">
 											<button class="btn showall-button">Hiển thị tất cả</button>
@@ -378,34 +364,24 @@
 						<!-- ALL GATEGORY-PRODUCT END -->
 						<!-- PRODUCT-SHOOTING-RESULT START -->
 						<div class="product-shooting-result product-shooting-result-border">
-							<form action="#">
-								<button class="btn compare-button">
-									So sánh (<strong class="compare-value">1</strong>)
-									<i class="fa fa-chevron-right"></i>
-								</button>
-							</form>
+							
 							<div class="showing-item">
-								<span>Xem 1 - 12 trong 13 sản phẩmm</span>
+								<span>Xem 1 - 12 trong ${count} sản phẩmm</span>
 							</div>
+                                                    
 							<div class="showing-next-prev">
 								<ul class="pagination-bar">
-									<li class="disabled">
-										<a href="#" ><i class="fa fa-chevron-left"></i>Trước</a>
-									</li>
-									<li class="active">
-										<span><a class="pagi-num" href="#">1</a></span>
-									</li>
-									<li>
-										<span><a class="pagi-num" href="#">2</a></span>
-									</li>
-									<li>
-										<a href="#" >Sau<i class="fa fa-chevron-right"></i></a>
-									</li>
+									 <c:forEach begin="1" end="${endPage}" var="i">
+											<li class="active">
+												<span><a class="pagi-num" href="shopyogaControl?cid=${i}">${i}</a></span>
+											</li>
+                                                                                </c:forEach>
 								</ul>
 								<form action="shopyogaControl">
 									<button class="btn showall-button">Hiển thị tất cả</button>
 								</form>
 							</div>
+                                                    
 						</div>	
 						<!-- PRODUCT-SHOOTING-RESULT END -->
 					</div>

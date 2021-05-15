@@ -43,11 +43,24 @@ public class shopyogaControl extends HttpServlet {
         ProductDAO dao = new ProductDAO();
         categoryDAO dao1 = new categoryDAO();
         List<category> listC = dao1.getListCategory();
-        List<Product> listP = dao.getAllProduct();
-        
-        
-        
-       request.setAttribute("listP", listP);
+        // dem so trang
+        int count = dao.getNumberPage();
+        int size = 12;
+        int endPage = count/size;
+        if(count % size != 0){
+            endPage++;
+        }
+        request.setAttribute("endPage", endPage);
+        request.setAttribute("count", count);
+        //xuat ra so trang
+        String index = request.getParameter("cid");
+        if(index ==null){
+            index ="1";
+        }
+        int indexPage = Integer.parseInt(index);
+        List<Product> listPaging = dao.getPag(indexPage);
+        request.setAttribute("listP", listPaging);
+
        request.setAttribute("listC", listC);
        request.getRequestDispatcher("shop-yoga.jsp").forward(request, response);
        

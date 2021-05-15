@@ -16,6 +16,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import model.account;
 
 /**
@@ -47,6 +48,9 @@ public class loginControl extends HttpServlet {
             request.setAttribute("mess", "Đăng nhập thất bại: sai tên tài khoản hoặc mật khẩu");
             request.getRequestDispatcher("registration.jsp").forward(request, response);
         }else{
+            HttpSession session = request.getSession();
+            session.setAttribute("acc", a);     // đẩy a lên trên session
+            //session.setMaxInactiveInterval(20); // session nay chi ton tai dc trong 20s
             request.getRequestDispatcher("shopyogaControl").forward(request, response);
         }
     }

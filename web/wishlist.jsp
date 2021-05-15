@@ -132,50 +132,113 @@
 						<!-- SINGLE SIDEBAR TAG END -->
 					</div>
 					<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-						<h2 class="page-title">My wishlists</h2>
+						<h2 class="page-title">Manager Product</h2>    
 						<!-- WISHLISTS-AREA START -->
-						<div class="wishlists-area">
-							<form class="new-wishlists-box primari-box" id="savewishlist" method="post" action="#">
-								<h3 class="box-subheading">New wishlist</h3>
-								<div class="primary-box-content">
-									<div class="form-group wishlists-form-group primary-form-group">
-										<label for="wishlist">Name</label>
-										<input type="text" value="" name="wishlist" id="wishlist" class="form-control input-feild white">
-									</div>
-									<div class="submit-button">
-										<a href="#" id="savewishlish" class="btn main-btn">Save <i class="fa fa-chevron-right"></i></a>
-									</div>
-								</div>
-							</form>								
-						</div>
+					
 						<!-- WISHLISTS-AREA END -->
 						<!-- WISHLISTS-CHART START -->
 						<div class="wishlists-chart table-responsive">
 							<table class="table table-bordered">
 								<tr>
+                                                                        <th class="wish-id">ID</th>
 									<th class="wish-name">Name</th>
-									<th class="wish-qty">Qty</th>
-									<th class="wish-view">Viewed</th>
-									<th class="wish-create">Created</th>
-									<th class="wish-link">Direct Link</th>
+									<th class="wish-image">Image</th>
+									<th class="wish-view">Price</th>
 									<th class="wish-default">Default</th>
 									<th class="wish-delete">Delete</th>
 								</tr>
 								<tr>
+                                                                        <td>
+										<span>1</span>
+									</td>
 									<td>
 										<a href="#">My wishlist </a>
 									</td>
 									<td>
-										<span>3</span>
+                                                                                <a href="#"><img src="img/wishlist/printed-chiffon-dress.jpg" alt="" /></a>
 									</td>
 									<td>
-										<span>0</span>
+										<span>100000</span>
 									</td>
 									<td>
-										<span>2015-08-06</span>
+										<span><i class="fa fa-check-square"></i></span>
 									</td>
 									<td>
-										<a href="#">View </a>
+										<a class="dele-wish-list" href="#"><i class="fa fa-close"></i></a>
+									</td>
+								</tr>
+                                                                <tr>
+                                                                        <td>
+										<span>1</span>
+									</td>
+									<td>
+										<a href="#">My wishlist </a>
+									</td>
+									<td>
+                                                                                <a href="#"><img src="img/wishlist/printed-chiffon-dress.jpg" alt="" /></a>
+									</td>
+									<td>
+										<span>100000</span>
+									</td>
+									<td>
+										<span><i class="fa fa-check-square"></i></span>
+									</td>
+									<td>
+										<a class="dele-wish-list" href="#"><i class="fa fa-close"></i></a>
+									</td>
+								</tr>
+                                                                <tr>
+                                                                        <td>
+										<span>1</span>
+									</td>
+									<td>
+										<a href="#">My wishlist </a>
+									</td>
+									<td>
+                                                                                <a href="#"><img src="img/wishlist/printed-chiffon-dress.jpg" alt="" /></a>
+									</td>
+									<td>
+										<span>100000</span>
+									</td>
+									<td>
+										<span><i class="fa fa-check-square"></i></span>
+									</td>
+									<td>
+										<a class="dele-wish-list" href="#"><i class="fa fa-close"></i></a>
+									</td>
+								</tr>
+                                                                <tr>
+                                                                        <td>
+										<span>1</span>
+									</td>
+									<td>
+										<a href="#">My wishlist </a>
+									</td>
+									<td>
+                                                                                <a href="#"><img src="img/wishlist/printed-chiffon-dress.jpg" alt="" /></a>
+									</td>
+									<td>
+										<span>100000</span>
+									</td>
+									<td>
+										<span><i class="fa fa-check-square"></i></span>
+									</td>
+									<td>
+										<a class="dele-wish-list" href="#"><i class="fa fa-close"></i></a>
+									</td>
+								</tr>
+                                                                <tr>
+                                                                        <td>
+										<span>1</span>
+									</td>
+									<td>
+										<a href="#">My wishlist </a>
+									</td>
+									<td>
+                                                                                <a href="#"><img src="img/wishlist/printed-chiffon-dress.jpg" alt="" /></a>
+									</td>
+									<td>
+										<span>100000</span>
 									</td>
 									<td>
 										<span><i class="fa fa-check-square"></i></span>

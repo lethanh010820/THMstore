@@ -4,6 +4,7 @@
     Author     : asus
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -95,9 +96,11 @@
                     <!-- HEADER-LEFT-MENU START -->
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <div class="header-left-menu">
+                            <c:if test="${sessionScope.acc != null}">
                             <div class="welcome-info">
-                                Chào mừng <span>nhatminh1401</span>
+                                Chào mừng <span>${sessionScope.acc.nameU}</span>
                             </div>
+                            </c:if>
                             <div class="currenty-converter">
                                 <form method="post" action="#" id="currency-set">
                                     <div class="current-currency">
@@ -130,11 +133,16 @@
                         <div class="header-right-menu">
                             <nav>
                                 <ul class="list-inline">
-                                    <li><a href="checkout.jsp">Kiểm tra</a></li>
-                                    <li><a href="wishlist.jsp">Danh sách</a></li>
-                                    <li><a href="my-account.jsp">Tài khoản của tôi</a></li>
-                                    <li><a href="cart.jsp">Giỏ hàng của tôi</a></li>
-                                    <li><a href="registration.jsp">Đăng nhập</a></li>
+                                    <c:if test="${sessionScope.acc != null}">
+                                        <li><a href="checkout.jsp">Kiểm tra</a></li>
+                                        <li><a href="managerProduct">Quản lý sản phẩm</a></li>
+                                        <li><a href="my-account.jsp">Tài khoản của tôi</a></li>
+                                        <li><a href="cart.jsp">Giỏ hàng của tôi</a></li>
+                                        <li><a href="logOut">Đăng xuất</a></li>
+                                    </c:if>
+                                    <c:if test="${sessionScope.acc == null}">
+                                        <li><a href="registration.jsp">Đăng nhập</a></li>
+                                    </c:if>
                                 </ul>									
                             </nav>
                         </div>
@@ -151,7 +159,7 @@
                     <div class="col-sm-12">
                         <!-- LOGO START -->
                         <div class="logo">
-                            <a href="index.jsp"><img src="img/logo.png" alt="THM-Store logo" /></a>
+                            <a href="index"><img src="img/logo.png" alt="THM-Store logo" /></a>
                         </div>
                         <!-- LOGO END -->
                         <!-- HEADER-RIGHT-CALLUS START -->
@@ -236,7 +244,7 @@
                         <div class="mainmenu">
                             <nav>
                                 <ul class="list-inline mega-menu">
-                                    <li class="active"><a href="index.jsp">Trang chủ</a></li>
+                                    <li class="active"><a href="index">Trang chủ</a></li>
                                     <li><a href="shopyogaControl">Đồ thể thao</a></li>
                                 </ul>
                             </nav>

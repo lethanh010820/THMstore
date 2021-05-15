@@ -127,10 +127,6 @@
                                     <h3 class="box-subheading">Tạo tài khoản</h3>
                                     <div class="form-content">
                                         <p>Please enter your email address to create an account.</p>
-                                        <div class="form-group primary-form-group">
-                                            <label for="email">Nhập địa chỉ Email</label>
-                                            <input type="text" value="" name="email" id="email" class="form-control input-feild" required>
-                                        </div>
                                         <div class="submit-button">
                                             <a href="checkout-registration.jsp" id="SubmitCreate" class="btn main-btn">
                                                 <span>

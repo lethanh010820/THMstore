@@ -105,6 +105,26 @@ public class ProductDAO {
         }
         return null;
     }
+    public Product getProduct(String txt)
+            throws SQLException {
+        Connection connection = DBConnect.getConnecttion();
+        String sql = "SELECT * FROM product WHERE product_id= ?";
+        ArrayList<Product> list = new ArrayList<>();
+        PreparedStatement ps = connection.prepareCall(sql);
+        ps.setString(1, txt);
+        ResultSet rs = ps.executeQuery();
+        while (rs.next()) {
+                return new Product(rs.getInt(1),
+                        rs.getInt(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getDouble(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                1);
+            }
+        return null;
+    }
     public Product getLast()
             throws SQLException {
         Connection connection = DBConnect.getConnecttion();

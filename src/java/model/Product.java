@@ -9,6 +9,8 @@ public class Product {
     private double productPrice;
     private String productTitle;
     private String ProductDescription;
+    private int amount;
+
     
     public Product() {
     }
@@ -66,8 +68,16 @@ public class Product {
     public void setProductDescription(String ProductDescription) {
         this.ProductDescription = ProductDescription;
     }
+    
+    public int getAmount() {
+        return amount;
+    }
 
-    public Product(int productID, int categoryID, String productName, String productImage, double productPrice, String productTitle, String ProductDescription) {
+    public void setAmount(int amount) {
+        this.amount = amount;
+    }
+
+    public Product(int productID, int categoryID, String productName, String productImage, double productPrice, String productTitle, String ProductDescription, int amount) {
         this.productID = productID;
         this.categoryID = categoryID;
         this.productName = productName;
@@ -75,5 +85,6 @@ public class Product {
         this.productPrice = productPrice;
         this.productTitle = productTitle;
         this.ProductDescription = ProductDescription;
+        this.amount = amount;
     }
 }

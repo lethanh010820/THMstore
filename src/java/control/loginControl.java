@@ -51,7 +51,7 @@ public class loginControl extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("acc", a);     // đẩy a lên trên session
             //session.setMaxInactiveInterval(20); // session nay chi ton tai dc trong 20s
-            request.getRequestDispatcher("shopyogaControl").forward(request, response);
+            request.getRequestDispatcher("index").forward(request, response);
         }
     }
 

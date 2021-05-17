@@ -95,6 +95,24 @@
 		<!-- MODERNIZR JS 
 		============================================ -->
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="eCommerce HTML Template Free Download" name="keywords">
+        <meta content="eCommerce HTML Template Free Download" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/slick/slick.css" rel="stylesheet">
+        <link href="lib/slick/slick-theme.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
     </head>
     <body>
         <jsp:include page="header.jsp"></jsp:include>
@@ -106,123 +124,56 @@
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<!-- BSTORE-BREADCRUMB START -->
 						<div class="bstore-breadcrumb">
-							<a href="index.jsp">HOMe</a>
+							<a href="index.jsp">Trang chủ</a>
 							<span><i class="fa fa-caret-right	"></i></span>
-							<span>Addresses</span>
+							<span>Địa chỉ</span>
 						</div>
 						<!-- BSTORE-BREADCRUMB END -->
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<h2 class="page-title">Addresses</h2>
+						<h2 class="page-title">Địa chỉ giao hàng</h2>
 					</div>	
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-						<!-- SHOPING-CART-MENU START -->
-						<div class="shoping-cart-menu">
-							<ul class="step">
-								<li class="step-todo first step-done">
-									<span><a href="cart.jsp">01. Summary</a></span>
-								</li>
-								<li class="step-todo second step-done">
-									<span><a href="checkout-signin.jsp">02. Sign in</a></span>
-								</li>
-								<li class="step-current third">
-									<span>03. Address</span>
-								</li>
-								<li class="step-todo four">
-									<span>04. Shipping</span>
-								</li>
-								<li class="step-todo last" id="step_end">
-									<span>05. Payment</span>
-								</li>
-							</ul>									
-						</div>
-						<!-- SHOPING-CART-MENU END -->
-					</div>
-					<!-- ADDRESS AREA START --> 
-					<div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
-						<div class="form-group primary-form-group p-info-group deli-address-group">
-							<label>Choose a delivery address:</label>
-							<div class="birth-day delivery-address">
-								<select id="deli-address" name="deliveryaddress">
-									<option value="">Your Office Address</option>
-									<option value="">Your Office Address</option>
-									<option value="">Other Address</option>
-								</select>												
-							</div>
-						</div>	
-						<div class="form-group primary-form-group p-info-group chose-address">
-							<label class="cheker">
-								<input type="checkbox" name="checkbox">
-								<span></span>
-							</label>
-							<a href="#">Use the delivery address as the billing address.</a>
-						</div>							
-					</div>
+				
 				</div>
 				<div class="row">
-					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-						<div class="first_item primari-box">
-							<!-- DELIVERY ADDRESS START -->
-							<ul class="address">
-								<li>
-									<h3 class="page-subheading box-subheading">
-										Your delivery address
-									</h3>
-								</li>
-								<li><span class="address_name">BootExperts</span></li>
-								<li><span class="address_company">Web development Company</span></li>
-								<li><span class="address_address1">Bonossri</span></li>
-								<li><span class="address_address2">D-Block</span></li>
-								<li><span class="">Rampura</span></li>
-								<li><span class="">Dhaka</span></li>
-								<li><span class="address_phone">+880 1735161598</span></li>
-								<li><span class="address_phone_mobile">+880 1975161598</span></li>
-								<li class="update-button">
-									<a href="my-cart-step-2-info.jsp">Update<i class="fa fa-chevron-right"></i></a>
-								</li>								
-							</ul>	
-							<!-- DELIVERY ADDRESS END -->
-						</div>						
-					</div>
-					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-						<div class="second_item primari-box">
-							<!-- BILLING ADDRESS START -->
-							<ul class="address">
-								<li>
-									<h3 class="page-subheading box-subheading">
-										Your billing address
-									</h3>
-								</li>
-								<li><span class="address_name">BootExperts</span></li>
-								<li><span class="address_company">Web development Company</span></li>
-								<li><span class="address_address1">Dhaka</span></li>
-								<li><span class="address_address2">Bonossri</span></li>
-								<li><span class="">Dhaka-1205</span></li>
-								<li><span class="">Rampura</span></li>
-								<li><span class="address_phone">+880 1735161598</span></li>
-								<li><span class="address_phone_mobile">+880 1975161598</span></li>
-								<li class="update-button">
-									<a href="my-cart-step-2-info.jsp">Update<i class="fa fa-chevron-right"></i></a>
-								</li>									
-							</ul>	
-							<!-- BILLING ADDRESS END -->
-						</div>
-					</div>
+					<div class="checkout-inner">
+                                            <div class="billing-address" style="padding-right: 20px;padding-left: 15px;">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Họ và Tên</label>
+                                        <input class="form-control" type="text" placeholder="Họ và tên">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>E-mail</label>
+                                        <input class="form-control" type="text" placeholder="E-mail">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>Số Điện Thoại</label>
+                                        <input class="form-control" type="text" placeholder="Số điện thoại">
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label>Địa Chỉ</label>
+                                        <input class="form-control" type="text" placeholder="Địa chỉ">
+                                    </div>
+                                    
+                                </div>
+                            </div>
+					
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<div class="add-new-address">
-							<a href="my-cart-step-2-info.jsp" class="new-address-link">Add a new address<i class="fa fa-chevron-right"></i></a>
+							
 							<div class="form-group p-info-group type-address-group">
-								<label>If you would like to add a comment about your order, please write it in the field below.</label>
+								<label>Nếu bạn muốn thêm nhận xét về đơn đặt hàng của mình, vui lòng viết nó vào trường bên dưới.</label>
 								<textarea class="form-control input-feild " name="addcomment"></textarea>
 							</div>							
 						</div>
 						<!-- ADDRESS AREA START --> 
 						<!-- RETURNE-CONTINUE-SHOP START -->
 						<div class="returne-continue-shop ship-address">
-							<a href="index.jsp" class="continueshoping"><i class="fa fa-chevron-left"></i>Continue shopping</a>
-							<a href="checkout-shipping.jsp" class="procedtocheckout">Proceed to checkout<i class="fa fa-chevron-right"></i></a>
+							<a href="index" class="continueshoping"><i class="fa fa-chevron-left"></i>Tiếp tục mua sắm</a>
+							<a href="index" class="procedtocheckout">Thanh toán<i class="fa fa-chevron-right"></i></a>
 						</div>	
 						<!-- RETURNE-CONTINUE-SHOP END -->		
 					</div>					

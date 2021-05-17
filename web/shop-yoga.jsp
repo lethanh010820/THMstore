@@ -325,7 +325,7 @@
 										<div class="single-product-item">
 											<div class="product-image">
 												<a href="detail?pid=${o.productID}"><img src="${o.productImage}" alt="product-image" /></a>
-												<a href="detail?pid=${o.productID}" class="new-mark-box">new</a>
+												<a href="cart?id=${o.productID}" class="new-mark-box">Buy</a>
 												<div class="overlay-content">
 													<ul>
 														<li><a href="#" title="Quick view"><i class="fa fa-search"></i></a></li>

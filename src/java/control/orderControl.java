@@ -18,7 +18,9 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import model.Product;
+import model.account;
 
 /**
  *
@@ -65,7 +67,8 @@ public class orderControl extends HttpServlet {
             o.setMaxAge(0);
             response.addCookie(o);
         }
-        response.sendRedirect("checkout-address.jsp");
+        
+        request.getRequestDispatcher("checkout-address.jsp").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

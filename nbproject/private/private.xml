@@ -3,27 +3,27 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/asus/Desktop/THMstore/src/java/control/managerProductControl.java</file>
             <file>file:/C:/Users/asus/Desktop/THMstore/src/java/model/Product.java</file>
             <file>file:/C:/Users/asus/Desktop/THMstore/web/checkout-address.jsp</file>
-            <file>file:/C:/Users/asus/Desktop/THMstore/web/Home.jsp</file>
+            <file>file:/C:/Users/asus/Desktop/THMstore/src/java/control/detailControl.java</file>
             <file>file:/C:/Users/asus/Desktop/THMstore/web/Cart.jsp</file>
             <file>file:/C:/Users/asus/Desktop/THMstore/web/shop-yoga.jsp</file>
+            <file>file:/C:/Users/asus/Desktop/THMstore/src/java/model/account.java</file>
             <file>file:/C:/Users/asus/Desktop/THMstore/web/single-product.jsp</file>
-            <file>file:/C:/Users/asus/Desktop/THMstore/web/Edit.jsp</file>
-            <file>file:/C:/Users/asus/Desktop/THMstore/web/checkout-registration.jsp</file>
-            <file>file:/C:/Users/asus/Desktop/THMstore/web/header.jsp</file>
-            <file>file:/C:/Users/asus/Desktop/THMstore/src/java/control/subControl.java</file>
             <file>file:/C:/Users/asus/Desktop/THMstore/src/java/control/addControl.java</file>
             <file>file:/C:/Users/asus/Desktop/THMstore/web/ManagerProduct.jsp</file>
             <file>file:/C:/Users/asus/Desktop/THMstore/src/java/control/removeProductControl.java</file>
             <file>file:/C:/Users/asus/Desktop/THMstore/src/java/control/showCartControl.java</file>
+            <file>file:/C:/Users/asus/Desktop/THMstore/src/java/control/logOutControl.java</file>
             <file>file:/C:/Users/asus/Desktop/THMstore/src/java/control/orderControl.java</file>
+            <file>file:/C:/Users/asus/Desktop/THMstore/src/java/control/signUpControl.java</file>
+            <file>file:/C:/Users/asus/Desktop/THMstore/src/java/model/bill.java</file>
             <file>file:/C:/Users/asus/Desktop/THMstore/src/java/control/cartControl.java</file>
             <file>file:/C:/Users/asus/Desktop/THMstore/src/java/dao/ProductDAO.java</file>
+            <file>file:/C:/Users/asus/Desktop/THMstore/src/java/control/loginControl.java</file>
             <file>file:/C:/Users/asus/Desktop/THMstore/web/cart-1.jsp</file>
             <file>file:/C:/Users/asus/Desktop/THMstore/src/java/control/shopyogaControl.java</file>
-            <file>file:/C:/Users/asus/Desktop/THMstore/src/java/dao/categoryDAO.java</file>
-            <file>file:/C:/Users/asus/Desktop/THMstore/src/java/control/loginControl.java</file>
         </group>
     </open-files>
 </project-private>

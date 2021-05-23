@@ -143,21 +143,20 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label>Họ và Tên</label>
-                                        <input class="form-control" type="text" placeholder="Họ và tên">
+                                        <input value="${sessionScope.acc.nameU}" name="name" class="form-control" type="text" placeholder="Họ và tên">
                                     </div>
                                     <div class="col-md-6">
                                         <label>E-mail</label>
-                                        <input class="form-control" type="text" placeholder="E-mail">
+                                        <input value="${sessionScope.acc.email}" name="email" class="form-control" type="text" placeholder="E-mail">
                                     </div>
                                     <div class="col-md-6">
                                         <label>Số Điện Thoại</label>
-                                        <input class="form-control" type="text" placeholder="Số điện thoại">
+                                        <input value="${sessionScope.acc.phone}" name="phone" class="form-control" type="text" placeholder="Số điện thoại">
                                     </div>
                                     <div class="col-md-12">
                                         <label>Địa Chỉ</label>
-                                        <input class="form-control" type="text" placeholder="Địa chỉ">
+                                        <input value="${sessionScope.acc.address}" name="address" class="form-control" type="text" placeholder="Địa chỉ">
                                     </div>
-                                    
                                 </div>
                             </div>
 					
@@ -173,7 +172,7 @@
 						<!-- RETURNE-CONTINUE-SHOP START -->
 						<div class="returne-continue-shop ship-address">
 							<a href="index" class="continueshoping"><i class="fa fa-chevron-left"></i>Tiếp tục mua sắm</a>
-							<a href="index" class="procedtocheckout">Thanh toán<i class="fa fa-chevron-right"></i></a>
+							<a href="shopyogaControl" class="procedtocheckout">Thanh toán<i class="fa fa-chevron-right"></i></a>
 						</div>	
 						<!-- RETURNE-CONTINUE-SHOP END -->		
 					</div>					

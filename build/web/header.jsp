@@ -104,7 +104,7 @@
                             <div class="currenty-converter">
                                 <form method="post" action="#" id="currency-set">
                                     <div class="current-currency">
-                                        <span class="cur-label"  href="#">Đơn vị tiền tệ : </span><strong>VND</strong>
+                                        <span class="cur-label" href="#">Đơn vị tiền tệ : </span><strong>VND</strong>
                                     </div>
                                     <ul class="currency-list currency-toogle">
                                         <li>

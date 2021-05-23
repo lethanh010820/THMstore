@@ -302,6 +302,19 @@ public class ProductDAO {
         
         ps.executeUpdate();// update lai du lieu
     }
+     public void insertBill(String pname, String pemail, String paddress, String pphone, double total)
+             throws SQLException {      
+        Connection connection = DBConnect.getConnecttion();
+        String sql = "INSERT INTO `order` (`billID`, `user_name`, `email`, `address`, `phone`, `total`) VALUES (NULL, ?, ?, ?, ?, ?);";
+        PreparedStatement ps = connection.prepareCall(sql);
+        ps.setString(1, pname);
+        ps.setString(2, pemail);
+        ps.setString(3, paddress);
+        ps.setString(4, pphone);
+        ps.setDouble(5, total);
+        
+        ps.executeUpdate();// update lai du lieu
+    }
     public void editProduct(String pcategory, String pname, String pimage, String pprice, String ptitle, String pdescription, String pid)
              throws SQLException {      
         Connection connection = DBConnect.getConnecttion();

@@ -2,7 +2,7 @@ package model;
 
 public class Product {
 
-    private int productID;
+    private long productID;
     private int categoryID;
     private String productName;
     private String productImage;
@@ -15,7 +15,7 @@ public class Product {
     public Product() {
     }
 
-    public int getProductID() {
+    public long getProductID() {
         return productID;
     }
 
@@ -77,7 +77,7 @@ public class Product {
         this.amount = amount;
     }
 
-    public Product(int productID, int categoryID, String productName, String productImage, double productPrice, String productTitle, String ProductDescription, int amount) {
+    public Product(long productID, int categoryID, String productName, String productImage, double productPrice, String productTitle, String ProductDescription, int amount) {
         this.productID = productID;
         this.categoryID = categoryID;
         this.productName = productName;

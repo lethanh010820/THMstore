@@ -5,51 +5,53 @@
  */
 package model;
 
-/**
- *
- * @author asus
- */
-public class bill {
-    private int billID;
-    private String user_name;
-    private String email;
-    private String address;
-    private String phone;
+import java.sql.Timestamp;
+
+public class Bill {
+
+    private long billID;
+    private String user_id;
     private double total;
+    private String address;
+    private Timestamp date;
     
-    public bill() {
-    }
-    
-    public bill(int billID, String user_name, String email, String address, String phone) {
-        this.billID = billID;
-        this.user_name = user_name;
-        this.email = email;
-        this.address = address;
-        this.phone = phone;
+
+    public Bill() {
+        
     }
 
-    public int getBillID() {
+    public Bill(long billID, String user_id, double total, String address, Timestamp date) {
+        this.billID = billID;
+        this.user_id = user_id;
+        this.total = total;
+        this.address = address;
+        this.date = date;
+    }
+
+   
+
+    public long getBillID() {
         return billID;
     }
 
-    public void setBillID(int billID) {
+    public void setBillID(long billID) {
         this.billID = billID;
     }
 
-    public String getUser_name() {
-        return user_name;
+    public String getUser_id() {
+        return user_id;
     }
 
-    public void setUser_name(String user_name) {
-        this.user_name = user_name;
+    public void setUser_id(String user_id) {
+        this.user_id = user_id;
     }
 
-    public String getEmail() {
-        return email;
+    public double getTotal() {
+        return total;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setTotal(double total) {
+        this.total = total;
     }
 
     public String getAddress() {
@@ -60,19 +62,14 @@ public class bill {
         this.address = address;
     }
 
-    public String getPhone() {
-        return phone;
+    public Timestamp getDate() {
+        return date;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setDate(Timestamp date) {
+        this.date = date;
     }
 
-    public double getTotal() {
-        return total;
-    }
 
-    public void setTotal(double total) {
-        this.total = total;
-    }
+    
 }

@@ -62,6 +62,7 @@ public class shopyogaControl extends HttpServlet {
         request.setAttribute("listP", listPaging);
 
        request.setAttribute("listC", listC);
+       //response.sendRedirect("Cart.jsp");
        request.getRequestDispatcher("shop-yoga.jsp").forward(request, response);
        
     }

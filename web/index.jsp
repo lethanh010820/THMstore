@@ -3,11 +3,21 @@
     Created on : Mar 24, 2021, 7:46:03 PM
     Author     : asus
 --%>
+<%@page import="model.Cart"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="model.category"%> 
 <%@page import="dao.categoryDAO"%> 
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+
+            Cart cart = (Cart) session.getAttribute("cart");
+            if (cart == null) {
+                cart = new Cart();
+                session.setAttribute("cart", cart);
+            }
+            
+          %>
 <!doctype html>
 <!--[if IE]><![endif]-->
 <!--[if lt IE 7 ]> <html lang="en" class="ie6">    <![endif]-->

@@ -1,5 +1,15 @@
+<%@page import="model.Cart"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%
+
+            Cart cart = (Cart) session.getAttribute("cart");
+            if (cart == null) {
+                cart = new Cart();
+                session.setAttribute("cart", cart);
+            }
+            
+          %>
 <!doctype html>
 <!--[if IE]><![endif]-->
 <!--[if lt IE 7 ]> <html lang="en" class="ie6">    <![endif]-->
@@ -325,7 +335,7 @@
 										<div class="single-product-item">
 											<div class="product-image">
 												<a href="detail?pid=${o.productID}"><img src="${o.productImage}" alt="product-image" /></a>
-												<a href="cart?id=${o.productID}" class="new-mark-box">Buy</a>
+												<a href="plusorsub?command=plus&productID=${o.productID}" class="new-mark-box">Buy</a>
 												<div class="overlay-content">
 													<ul>
 														<li><a href="#" title="Quick view"><i class="fa fa-search"></i></a></li>

@@ -8,7 +8,7 @@ public class DBConnect {
         Connection cons = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            cons = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/thmstore", "root", "");
+            cons = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/thmstore1", "root", "");
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -41,7 +41,7 @@ public class detailControl extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         String id = request.getParameter("pid");
         ProductDAO dao = new ProductDAO();
-        Product p = dao.getListProductByID(id);
+        Product p = dao.getListProductByID(Integer.parseInt(id));
         Product last = dao.getLast();
         
         request.setAttribute("detail", p);

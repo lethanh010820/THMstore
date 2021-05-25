@@ -86,12 +86,11 @@ public class ProductDAO {
         }
         return list;
     }
-    public Product getListProductByID(String id)
+    public Product getListProductByID(long id)
             throws SQLException {
         Connection connection = DBConnect.getConnecttion();
-        String sql = "SELECT * FROM product WHERE product_id= ?";
+        String sql = "SELECT * FROM product where product_id = " + "'" + id + "'";
         PreparedStatement ps = connection.prepareCall(sql);
-        ps.setString(1, id);
         ResultSet rs = ps.executeQuery();
         while (rs.next()) {
             Product product = new Product();

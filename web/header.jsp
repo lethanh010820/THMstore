@@ -6,6 +6,16 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import= "model.Cart"%>
+<%@page import= "model.Item"%>
+<%@page import= "java.util.Map"%>
+<%
+    Cart cart = (Cart) session.getAttribute("cart");
+    if(cart == null){
+        cart = new Cart();
+        session.setAttribute("cart", cart);
+    }
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -137,7 +147,7 @@
                                         <li><a href="checkout.jsp">Kiểm tra</a></li>
                                         <li><a href="managerProduct">Quản lý sản phẩm</a></li>
                                         <li><a href="my-account.jsp">Tài khoản của tôi</a></li>
-                                        <li><a href="print">Giỏ hàng của tôi</a></li>
+                                        <li><a href="Cart.jsp">Giỏ hàng của tôi</a></li>
                                         <li><a href="logOut">Đăng xuất</a></li>
                                     </c:if>
                                     <c:if test="${sessionScope.acc == null}">
@@ -193,9 +203,10 @@
                     <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 pull-right shopingcartarea">
                         <div class="shopping-cart-out pull-right">
                             <div class="shopping-cart">
-                                <a class="shop-link" href="print" title="View my shopping cart">
+                                <a class="shop-link" href="Cart.jsp" title="View my shopping cart">
                                     <i class="fa fa-shopping-cart cart-icon"></i>
                                     <b>Giỏ hàng</b>
+                                    <span class="ajax-cart-quantity"><%=cart.countItem()%></span>
                                 </a>
                             </div>
                         </div>

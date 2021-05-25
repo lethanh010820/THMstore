@@ -6,103 +6,68 @@
 package control;
 
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.sql.SQLException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import dao.ProductDAO;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import model.Cart;
+import model.Item;
+import model.Product;
 
-/**
- *
- * @author asus
- */
-@WebServlet(name = "cartControl", urlPatterns = {"/cart"})
-public class cartControl extends HttpServlet {
-
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     * @throws java.sql.SQLException
-     */
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, SQLException {
-        response.setContentType("text/html;charset=UTF-8");
-        String id = request.getParameter("id");
-        Cookie arr[] = request.getCookies();
-        String txt = "";
-        for (Cookie o : arr) {
-            if (o.getName().equals("id")) {
-                txt = txt + o.getValue();
-                o.setMaxAge(0);
-                response.addCookie(o);
-            }
-        }
-        if (txt.isEmpty()) {
-            txt = id;
-        } else {
-            txt = txt + "n" + id;
-        }
-        Cookie c = new Cookie("id", txt);
-        c.setMaxAge(60 * 60 * 24);
-        response.addCookie(c);
-        response.sendRedirect("print");
-    }
-
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
-    /**
-     * Handles the HTTP <code>GET</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+@WebServlet(name = "CartControl", urlPatterns = {"/cart"})
+public class CartControl extends HttpServlet {
+   
+    private final ProductDAO productDAO = new ProductDAO();
+    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try {
-            processRequest(request, response);
-        } catch (SQLException ex) {
-            Logger.getLogger(addControl.class.getName()).log(Level.SEVERE, null, ex);
-        }
+            doPost(request, response);
     }
 
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try {
-            processRequest(request, response);
-        } catch (SQLException ex) {
-            Logger.getLogger(addControl.class.getName()).log(Level.SEVERE, null, ex);
+        response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("UTF-8");
+        HttpSession session = request.getSession();
+        String command = request.getParameter("command");
+        String productID = request.getParameter("productID");
+        
+        Cart cart = (Cart) session.getAttribute("cart");
+        try{
+            Long idproduct = Long.parseLong(productID);
+            Product product = productDAO.getListProductByID(idproduct);
+            switch(command){
+                case "plus":
+                    if(cart.getCartItems().containsKey(idproduct)){
+                        cart.plusToCart(idproduct, new Item(product, cart.getCartItems().get(idproduct).getQuantity()));
+                    }else{
+                        cart.plusToCart(idproduct, new Item(product, 1));
+                    }
+                    break;    
+                case  "sub":
+                    if(cart.getCartItems().containsKey(idproduct)){
+                        cart.subToCart(idproduct, new Item(product, cart.getCartItems().get(idproduct).getQuantity()));
+                    }else{
+                        cart.subToCart(idproduct, new Item(product, 1));
+                    }
+                    break;
+                case "remove":
+                    cart.removeToCart(idproduct);
+                    break;
+            }
+            
+        }catch( Exception e){
+            e.printStackTrace();
+            response.sendRedirect("Cart.jsp");
+            
         }
+        session.setAttribute("cart", cart);
+        response.sendRedirect("Cart.jsp");
     }
-
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }// </editor-fold>
 
 }

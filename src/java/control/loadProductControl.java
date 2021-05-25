@@ -42,7 +42,7 @@ public class loadProductControl extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         String id = request.getParameter("pid");
         ProductDAO dao = new ProductDAO();
-        Product p = dao.getListProductByID(id);
+        Product p = dao.getListProductByID(Integer.parseInt(id));
         categoryDAO dao1 = new categoryDAO();
         List<category> listC = dao1.getListCategory();
         
